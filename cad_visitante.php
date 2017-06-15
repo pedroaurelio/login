@@ -3,7 +3,7 @@
        
       
       <div class="page-header">
-        <h1>Cadastrar Visitantes</h1>
+        <h1>Cadastrar Visitante</h1>
 
       </div>
       <div class="row espaco">
