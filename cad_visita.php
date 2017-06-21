@@ -1,16 +1,29 @@
-  <?php
-    $id = $_GET['id'];
+<?php
 
-    // Executa a consulta
-    $result=mysqli_query($conn,"SELECT * FROM visitante WHERE id='$id' LIMIT 1");
-    $resultado=mysqli_fetch_assoc($result);
- 
+$id = isset($_GET['id'])?$_GET['id']:"";
+
+/* outra forma de fazer com isset ( onde ele diz caso nao exista nao informar nada)
+
+$id = '';
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+}
+
+*/
+
+// Executa a consulta
+$result=mysqli_query($conn,"SELECT * FROM visitante WHERE id='$id' LIMIT 1");
+$resultado=mysqli_fetch_assoc($result);
+
+$resultsetor=mysqli_query($conn, "SELECT * FROM setor ORDER BY 'id'");
+$setor=mysqli_num_rows($resultsetor);
+
 ?>
         <div class="container">
        
       
       <div class="page-header">
-        <h1>Editar Visitante</h1>
+        <h1>Cadastrar Visita</h1>
 
       </div>
       <div class="row espaco">
@@ -20,23 +33,38 @@
         <div class="col-md-12">
         <form class="form-horizontal" method="POST" action="processa/processa_edit_visitante.php">
   <div class="form-group">
-    <label for="inputEmail3" class="col-sm-2 control-label">Nome</label>
-    <div class="col-sm-10">
+    <label for="inputEmail3" class="col-sm-3 control-label">Nome</label>
+    <div class="col-sm-6">
       <input type="text" class="form-control" name="nome" placeholder="Nome Completo" value ="<?php echo $resultado['nome']; ?>">
     </div>
   </div>
   <div class="form-group">
-    <label for="inputEmail3" class="col-sm-2 control-label">Empresa</label>
-    <div class="col-sm-10">
+    <label for="inputEmail3" class="col-sm-3 control-label">Empresa</label>
+    <div class="col-sm-6">
       <input type="text" class="form-control" name="empresa" placeholder="Empresa" value ="<?php echo $resultado['empresa']; ?>">
     </div>
   </div>
   <div class="form-group">
-    <label for="inputEmail3" class="col-sm-2 control-label">Nome do Pai</label>
-    <div class="col-sm-10">
+    <label for="inputEmail3" class="col-sm-3 control-label">Objetivo</label>
+    <div class="col-sm-6">
       <input type="text" class="form-control" name="objetivo" placeholder="objetivo">
     </div>
   </div>
+  <div class="form-group">
+  <label for="inputEmail3" class="col-sm-3 control-label">Setor</label>
+  <div class="col-sm-6">
+<select name="setor" class="form-control">
+<option>Selecione</option>
+<?php
+  $setor=mysqli_query($conn, "SELECT * FROM setor ORDER BY 'id'");  
+  while($linhas = mysqli_fetch_assoc($setor)){ ?>
+  <option value="<?php echo $linhas['id']; ?>"><?php echo $linhas['nome']; ?></option>
+  <?php 
+}
+?>  
+</select>
+</div>
+</div>
 
 
 
