@@ -31,11 +31,17 @@ $setor=mysqli_num_rows($resultsetor);
           </div>
       <div class="row">
         <div class="col-md-12">
-        <form class="form-horizontal" method="POST" action="processa/processa_edit_visitante.php">
+        <form class="form-horizontal" method="POST" action="processa/processa_cad_visita.php">
   <div class="form-group">
     <label for="inputEmail3" class="col-sm-3 control-label">Nome</label>
     <div class="col-sm-6">
+      <input type="hidden" name="id" value="<?php echo $resultado['id'];?>">
       <input type="text" class="form-control" name="nome" placeholder="Nome Completo" value ="<?php echo $resultado['nome']; ?>">
+    </div>
+    <div>
+      <button type="button" class="btn btn-primary btn-sm glyphicon glyphicon-search" data-toggle="modal" data-target="#myModal">
+</button>
+
     </div>
   </div>
   <div class="form-group">
@@ -51,7 +57,7 @@ $setor=mysqli_num_rows($resultsetor);
     </div>
   </div>
   <div class="form-group">
-  <label for="inputEmail3" class="col-sm-3 control-label">Setor</label>
+  <label for="inputEmail3" name="setor" class="col-sm-3 control-label">Setor</label>
   <div class="col-sm-6">
 <select name="setor" class="form-control">
 <option>Selecione</option>
@@ -66,17 +72,9 @@ $setor=mysqli_num_rows($resultsetor);
 </div>
 </div>
 
-
-
-
 <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-      
  <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-  Procurar Visitante
-</button>
-
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
@@ -150,7 +148,7 @@ $setor=mysqli_num_rows($resultsetor);
     </div>
   </div>
 </div> 
-<div> 
+ 
       <button type="submit" class="btn btn-primary">Cadastrar</button>
     </div>
   </div>

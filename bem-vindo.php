@@ -1,20 +1,23 @@
     
    <?php
 
-        $resultado=mysqli_query($conn, "SELECT * FROM visitante ORDER BY 'id'");
+        $resultado=mysqli_query($conn, "SELECT * FROM visita INNER JOIN visitante ON visita.id_visitante = id where visita_em_andamento = 1 ORDER BY id_visita");
         $linhas=mysqli_num_rows($resultado);
-        
-        
+
+
     ?>    
     
       <div class="container">
       <div class="page-header">
         <h1>Visitas em Andamento</h1>
       </div>
-            
-               
-
-      
+          <div class="row">
+          <div class="pull-left">
+          <a href='administrativo.php?link=11'><button type='button' class='btn btn-sm btn-success'>Cadastrar</button></a>
+          </div>
+          </div>
+          <br>
+          <br>
         <div class="row">
         <div class="col-md-12">
           <table class="table table-striped table-hover">
@@ -32,12 +35,12 @@
                 while($linhas = mysqli_fetch_array($resultado)){
                   echo "<tr>";                      
                       echo "<td>".$linhas['nome']."</td>";
-                      echo "<td>".$linhas['nome_mae']."</td>";
-                      echo "<td>".$linhas['data_nascimento']."</td>";
-                      echo "<td>".$linhas['data_nascimento']."</td>";
+                      echo "<td>".$linhas['empresa']."</td>";
+                      echo "<td>".$linhas['objetivo']."</td>";
+                      echo "<td>", date('d/m/Y H:i:s', strtotime($linhas['entrada'])), "</td>";
                       ?> 
                       <td> 
-                      <a href ='administrativo.php?link=5&id=<?php echo $linhas['id']; ?>'><button type='button' class='btn btn-xs btn-primary' title="Finalizar">Finalizar</button></a>
+                      <a href ='processa/processa_finalizar_visita.php?id_visita=<?php echo $linhas['id_visita'];?>&nome=<?php echo $linhas['nome'];?>'><button type='button' class='btn btn-xs btn-primary' title="Finalizar">Finalizar</button></a>
 
                       <a href ='administrativo.php?link=4&id=<?php echo $linhas['id']; ?>'><button type='button' class='btn btn-xs btn-warning' title="Editar">Editar</button></a>
 
@@ -45,13 +48,12 @@
                   echo "</tr>";
               }
               ?>
-
-              
             </tbody>
           </table>
         </div>
       </div>
 
     </div> <!-- /container -->
+
 
 

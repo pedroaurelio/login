@@ -53,7 +53,8 @@
         $pag[8] = "visual_setor.php";
         $pag[9] = "edit_setor.php";
         $pag[10] = "psicologa.php";
-        $pag[11] = "cad_visita.php"; 
+        $pag[11] = "cad_visita.php";
+        $pag[12] = "relatorio_nome.php";
       
 
       
