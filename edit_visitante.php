@@ -1,6 +1,5 @@
 <?php
     $id = $_GET['id'];
-
     // Executa a consulta
     $result=mysqli_query($conn,"SELECT * FROM visitante WHERE id='$id' LIMIT 1");
     $resultado=mysqli_fetch_assoc($result);
@@ -83,6 +82,3 @@
       </div>
 
     </div> <!-- /container -->
-
-
-    

@@ -44,19 +44,19 @@
   <div class="form-group">
     <label for="inputEmail3" class="col-sm-2 control-label">Nome da Mae</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" name="nome_mae" placeholder="Nome da Mae">
+      <input type="text" class="form-control text-uppercase" name="nome_mae" placeholder="Nome da Mae">
     </div>
   </div>
   <div class="form-group">
     <label for="inputEmail3" class="col-sm-2 control-label">Nome do Pai</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" name="nome_pai" placeholder="Nome do Pai">
+      <input type="text" class="form-control text-uppercase" name="nome_pai" placeholder="Nome do Pai">
     </div>
   </div>
   <div class="form-group">
     <label for="inputEmail3" class="col-sm-2 control-label">Empresa</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" name="empresa" placeholder="Nome da Empresa">
+      <input type="text" class="form-control text-uppercase" name="empresa" placeholder="Nome da Empresa">
     </div>
   </div>
   <div class="form-group">

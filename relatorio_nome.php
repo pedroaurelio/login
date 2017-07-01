@@ -9,7 +9,7 @@
     
       <div class="container">
       <div class="page-header">
-        <h1>Lista de Visitantes</h1>
+        <h1>Relatorio de Visita por Nome</h1>
       </div>
 
          <div class="row">
@@ -34,7 +34,7 @@
                       echo "<td>".$linhas['data_nascimento']."</td>";
                       ?> 
                       <td> 
-                      <a href ='administrativo.php?link=5&id=<?php echo $linhas['id']; ?>'><button type='button' class='btn btn-xs btn-primary'>Visualizar</button></a>
+                      <a href ='administrativo.php?link=13&id=<?php echo $linhas['id']; ?>'><button type='button' class='btn btn-xs btn-primary'>Visualizar</button></a>
                       <?php
                   echo "</tr>";
               }

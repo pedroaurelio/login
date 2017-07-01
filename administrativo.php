@@ -55,6 +55,9 @@
         $pag[10] = "psicologa.php";
         $pag[11] = "cad_visita.php";
         $pag[12] = "relatorio_nome.php";
+        $pag[13] = "relatorio_n.php";
+        $pag[14] = "relatorio_dia.php";
+        $pag[15] = "relatorio_d.php";
       
 
       
@@ -124,7 +127,6 @@
 
     <script src="js/angular.min.js"></script>
     <script src="js/webcam.js"></script>
-    
-    
+
   </body>
 </html>

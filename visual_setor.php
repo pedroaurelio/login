@@ -2,7 +2,7 @@
     $id = $_GET['id'];
 
     // Executa a consulta
-    $result=mysqli_query($conn,"SELECT * FROM categorias WHERE id='$id' LIMIT 1");
+    $result=mysqli_query($conn,"SELECT * FROM setor WHERE id='$id' LIMIT 1");
     $resultado=mysqli_fetch_assoc($result);
  
 ?>

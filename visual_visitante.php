@@ -1,6 +1,5 @@
-  <?php
+<?php
     $id = $_GET['id'];
-
     // Executa a consulta
     $result=mysqli_query($conn,"SELECT * FROM visitante WHERE id='$id' LIMIT 1");
     $resultado=mysqli_fetch_assoc($result);
@@ -26,7 +25,7 @@
 
         <div class="col-md-12">
 
-		      <div class="col-sm-3 col-md-2">
+          <div class="col-sm-3 col-md-2">
               <b>ID:</b> 
           </div>
           <div class="col-sm-9 col-md-10">
@@ -93,7 +92,4 @@
         </div>
       </div>
 
-    </div> <!-- /container -->
-
-
-    
+</div> <!-- /container -->

@@ -30,7 +30,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Relatorio de Visitas <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="administrativo.php?link=12">Nome</a></li>
-                <li><a href="#">Dia</a></li>
+                <li><a href="administrativo.php?link=14">Dia</a></li>
               </ul>
               <li><a href="sair.php">Sair</a></li>
             </li> 
