@@ -9,11 +9,11 @@
         <div class="col-md-12">
         <form class="form-inline" method="POST" action="administrativo.php?link=15">
   <div class="form-group">
-    <label for="exampleInputName2">Name</label>
+    <label for="exampleInputName2">Dia</label>
     <input type="text" class="form-control" data-mask= "99/99/9999" name="data1" id="data1" placeholder="DD/MM/AAA">
   </div>
   <div class="form-group">
-    <label for="exampleInputEmail2">Email</label>
+    <label for="exampleInputEmail2">Até</label>
     <input type="text" class="form-control" data-mask= "99/99/9999" name="data2" id="data2" placeholder="DD/MM/AAA">
   </div>
   <button type="submit" class="btn btn-primary">Procurar</button>

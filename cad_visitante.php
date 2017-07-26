@@ -54,6 +54,15 @@
     </div>
   </div>
   <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">RG</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control text-uppercase" name="rg" placeholder="RG">
+      </div>
+      <div class="col-sm-4">
+      <input type="text" class="form-control text-uppercase" name="cpf" placeholder="CPF">
+      </div>
+  </div>
+  <div class="form-group">
     <label for="inputEmail3" class="col-sm-2 control-label">Empresa</label>
     <div class="col-sm-10">
       <input type="text" class="form-control text-uppercase" name="empresa" placeholder="Nome da Empresa">

@@ -41,6 +41,15 @@
     </div>
   </div>
   <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">RG</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control text-uppercase" name="rg" placeholder="RG" value ="<?php echo $resultado['rg']; ?>">
+      </div>
+      <div class="col-sm-4">
+      <input type="text" class="form-control text-uppercase" name="cpf" placeholder="CPF" value ="<?php echo $resultado['cpf']; ?>">
+      </div>
+  </div>
+  <div class="form-group">
     <label for="inputEmail3" class="col-sm-2 control-label">Sexo</label>
     <div class="col-sm-10">
       <input type="text" class="form-control" name="sexo" placeholder="Sexo" value ="<?php echo $resultado['sexo']; ?>">

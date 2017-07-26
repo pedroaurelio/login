@@ -18,7 +18,7 @@
   <div class="form-group">
     <label for="inputEmail3" class="col-sm-2 control-label">Nome</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" name="nome" placeholder="Nome Setor">
+      <input type="text" class="form-control text-uppercase" name="nome" placeholder="Nome Setor">
     </div>
     </div>
 

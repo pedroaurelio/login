@@ -32,6 +32,7 @@
                 <th>Nome</th>
                 <th>Nome Mae</th>
                 <th>Data de Nascimento</th>
+                <th>Empresa</th>
                 <th>Ações</th>
               </tr>
             </thead>
@@ -43,6 +44,7 @@
                       echo "<td>".$linhas['nome']."</td>";
                       echo "<td>".$linhas['nome_mae']."</td>";
                       echo "<td>".$linhas['data_nascimento']."</td>";
+                      echo "<td>".$linhas['empresa']."</td>";
                       ?> 
                       <td> 
                       <a href ='administrativo.php?link=5&id=<?php echo $linhas['id']; ?>'><button type='button' class='btn btn-xs btn-primary'>Visualizar</button></a>

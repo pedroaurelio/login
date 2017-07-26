@@ -34,13 +34,13 @@ $query=mysqli_query($conn,"INSERT INTO visita (id_visitante, entrada, empresa, o
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title" id="myModalLabel">Usuário cadastrado com Sucesso!</h4>
+              <h4 class="modal-title" id="myModalLabel">Visita cadastrada com Sucesso!</h4>
             </div>
             <div class="modal-body">
               <?php echo $nome; ?>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-info" data-dismiss="modal">Corrigir Cadastro</button>
+              <button type="button" class="btn btn-info" data-dismiss="modal">Corrigir Visita</button>
               <a href="http://localhost/login/administrativo.php?link=1"><button type="button" class="btn btn-success">Ok</button></a>
             </div>
           </div>
@@ -57,7 +57,7 @@ $query=mysqli_query($conn,"INSERT INTO visita (id_visitante, entrada, empresa, o
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title" id="myModalLabel">Erro ao cadastrar o usuário!</h4>
+              <h4 class="modal-title" id="myModalLabel">Erro ao cadastrar a visita!</h4>
             </div>
             <div class="modal-body">                
               <?php

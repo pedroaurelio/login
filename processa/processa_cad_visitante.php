@@ -5,6 +5,8 @@ include_once("../conexao.php");
 $nome = $_POST["nome"];
 $nome_mae = $_POST["nome_mae"];
 $nome_pai = $_POST["nome_pai"];
+$rg = $_POST["rg"];
+$cpf = $_POST["cpf"];
 $empresa = $_POST["empresa"];
 $sexo = $_POST["sexo"];
 $data_nascimento = $_POST["data_nascimento"];
@@ -16,7 +18,7 @@ $bairro = $_POST["bairro"];
 $cidade = $_POST["cidade"];
 $uf = $_POST["uf"];
 $telefone = $_POST["telefone"];
-$query=mysqli_query($conn,"INSERT INTO visitante (nome, nome_mae, nome_pai, empresa, sexo, data_nascimento, email, cep, endereco, numero, bairro, cidade, uf , telefone) VALUES ('$nome', '$nome_mae','$nome_pai', '$empresa', '$sexo', '$data_nascimento', '$email', '$cep', '$endereco', '$numero', '$bairro', '$cidade', '$uf', '$telefone')");
+$query=mysqli_query($conn,"INSERT INTO visitante (nome, nome_mae, nome_pai, rg, cpf, empresa, sexo, data_nascimento, email, cep, endereco, numero, bairro, cidade, uf , telefone) VALUES ('$nome', '$nome_mae','$nome_pai', '$rg', '$cpf', '$empresa', '$sexo', '$data_nascimento', '$email', '$cep', '$endereco', '$numero', '$bairro', '$cidade', '$uf', '$telefone')");
 ?>
 
 
